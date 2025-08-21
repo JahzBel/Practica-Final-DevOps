@@ -10,7 +10,3 @@ describe("GET /", () => {
         expect(res.text).toContain("Hola Mundo");
     });
 });
-
-afterAll((done) => {
-  server.close(done);
-});
