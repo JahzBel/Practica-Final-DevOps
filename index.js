@@ -6,8 +6,10 @@ app.get("/", (req, res) => {
   res.send("Hola Mundo DevOps 🚀, desde la practica final por Jahzeel Benzan!");
 });
 
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  });
+}
 
 module.exports = app; // export para pruebas
